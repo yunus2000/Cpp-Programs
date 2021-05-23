@@ -1,0 +1,5 @@
+10
+a
+9.99
+Hello World!
+Keep Smiling!

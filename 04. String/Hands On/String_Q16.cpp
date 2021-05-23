@@ -1,4 +1,5 @@
 #include<iostream>
+#include<cstring>
 using namespace std;
 
 int main()
@@ -8,6 +9,7 @@ int main()
         char *t, *s;
 
         memset(str2, 0, sizeof(str2));
+        //cout << str2 << endl;
         s = str1;
         t = str2;
 

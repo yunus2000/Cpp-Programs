@@ -2,21 +2,24 @@
 using namespace std;
 
 class queue{
+	int front = -1, rear = -1;
+	int capac;
+	int *a = NULL;
+	
 	public:
-		int front = -1, rear = -1;
-		int capac;
-		//int a[capac];
 		queue(int n){
 			if(n == 0){
 				capac = 10;
+				a = new int[10];
 			}
 			else{
 				capac = n;
+				a = new int[n];
 			}
 			cout << "Queue is created!!" << endl;
 		}
 		
-		void add(int n,int *a){
+		void add(int n){
 			if(rear == capac-1){
 				cout << "Queue is Full!!" << endl;
 			}
@@ -27,7 +30,7 @@ class queue{
 			}
 		}
 		
-		void remove(int *a){
+		void remove(){
 			if(front == -1 || front > rear){
 				cout << "Queue is Empty!!" << endl;
 			}
@@ -37,7 +40,7 @@ class queue{
 			}
 		}
 		
-		int getfront(int *a){
+		int getfront(){
 			return(a[front]);
 		}
 		
@@ -59,15 +62,19 @@ class queue{
 			}
 		}
 		
+		~queue(){
+			cout << "Destructor of Queue is invoked and Cleaning is Done " << endl;
+			delete [] a;
+		}
+		
 };
 
 int main(){
 	
 	int n;
-	cout << "Enter the size: " << endl;
+	cout << "Enter the Size of Queue OR Enter '0' to continue with DEFALT Size: " << endl;
 	cin >> n;
 	queue q(n);
-	int a[n];
 	
 	int trig = 1;
 	while(trig){
@@ -80,10 +87,10 @@ int main(){
 			int n1;
 			cout << "Enter the number to add: " << endl;
 			cin >> n1;
-			q.add(n1,a);
+			q.add(n1);
 		}
 		if(trig == 2){
-			q.remove(a);
+			q.remove();
 		}
 	}
 	

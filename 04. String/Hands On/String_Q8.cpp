@@ -1,17 +1,20 @@
 #include<iostream>
 using namespace std;
 
-void reverse(string s){
-	string s1 = "";
-	for(int i=s.length() - 1; i>=0;i--){
-		s1 += s[i];
+void reverse(char *s1,char *s2,int n){
+	for(int i=0;i<n;i++){
+		*(s2+i) = *(s1+n-i-1);
 	}
-	cout << "Reversed String is : "<<s1;
 }
 
 int main(){
-	string s;
-	getline(cin,s);
-	cout << "Given String is: " << s << endl;
-	reverse(s);
+	char s1[30],s2[30];
+	cout << "Enter the String: ";
+	cin.getline(s1,30);
+	int n1 = 0;
+	while(s1[n1] != '\0'){
+		n1++;
+	}
+	reverse(s1,s2,n1);
+	cout << "Reversed String is: " << s2;
 }
