@@ -1,37 +1,33 @@
-#include <iostream>    //for cout
-#include <fstream>     // for ofstream/ifstream
-#include <string>     //for << and getline
+#include<iostream>
+using namespace std;
 
-//int main()
-int main(int argc, char *argv[])
-{
- std::cout << "There are " << argc << " arguments." << std::endl;
- for (int i = 0; i != argc; ++i)
- {
-  std::cout << argv[i] << std::endl;
- }
+int singledgt(int n){
+	int sum = 0,b = n;
+	while(b > 9){
+		while(n > 0){
+			sum += n%10;
+			n = n/10;
+		}
+		b = sum;
+		n = sum;
+	}
+	return b;
+}
 
- //std::string in_file = "test.txt";
- std::string in_file = argv[1];
- std::ifstream input_file(in_file.c_str());
-
- //std::string out_file = "test.txt";
- std::string out_file = argv[1];
- out_file += ".out"; //output file name test.txt.out
- std::ofstream output_file(out_file.c_str());
-
- std::string line;
- for (int line_no = 1; std::getline(input_file, line); ++line_no)
- {
-  std::cout << "LINE " << line_no << ":" << line << std::endl;
-  output_file << "LINE " << line_no << ":" << line << std::endl;
- }
-
- if (input_file)
- {
-  input_file.close();
-  output_file.close();
- }
- std::cin.get();
- return 0;
+int main(){
+	int n;
+	cout << "Enter Size of Array: ";
+	cin >> n;
+	int a[n];
+	cout << "Enter Elements in Array: " << endl;
+	for(int i=0;i<n;i++){
+		cin >> a[i];
+	}
+	
+	for(int i=0;i<n;i++){
+		if(a[i] > 9){
+			a[i] = singledgt(a[i]);
+		}
+		cout << a[i] << " ";
+	}
 }

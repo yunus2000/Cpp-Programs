@@ -1,0 +1,5 @@
+1.mkdir PJB
+2.cd PJB
+3.pwd
+4.touch john.dat
+5.ls

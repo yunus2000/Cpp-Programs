@@ -1,0 +1,6 @@
+1.touch welcome.dat
+2. :wq
+3. a):s/PBL/PJB/g
+   b)wc welcome.dat
+   c)Alt-k
+   d)

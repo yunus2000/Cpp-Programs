@@ -1,4 +1,4 @@
-1.Unix Basics               || HandsOn - *1,*2,*3                        || MiniPro - 1
+1.Unix Basics               || HandsOn -                                 || MiniPro - 1
 2.Cpp Basics                || HandsOn -                                 || MiniPro - 
 3.Arrays n Func             || HandsOn -                                 || MiniPro - 1
 4.Strings                   || HandsOn -                                 || MiniPro - 
@@ -11,6 +11,6 @@
 11.Inheritance,Poly         || HandsOn - 1,2,7,8,9,10                    ||
 12.Func&Opera Overloading   || HandsOn -                                 || MiniPro - 
 13.Virtual Func             || HandsOn - 2                               || 
-14.Files                    || HandsOn - 4,*5                            || MiniPro - 1,2,3,4,5
+14.Files                    || HandsOn -                                 || MiniPro - 1,2,3,4,5
 15.Exception Handling       || HandsOn -                                 || MiniPro - 
 16.RTTI,Namespace,Template  || HandsOn -                                 || MiniPro - 1

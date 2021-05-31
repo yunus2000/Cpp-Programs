@@ -1,0 +1,6 @@
+1.touch prog1.c,prog2.c,app1.c,app2.c,app12.c,app11.c
+2.ls app*
+3.ls app1?2.c
+4.ls prog*.c
+5.rm *.c
+6.rmdir ../PJB
